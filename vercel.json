@@ -1,12 +1,23 @@
 {
-    "builds": [
-      {
-        "src": "index.html",
-        "use": "@vercel/static"
-      }
-    ],
-    "installCommand": "echo 'Skipping install'",
-    "buildCommand": "echo 'Skipping build'",
-    "outputDirectory": "."
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/unruggable-go.wasm",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/wasm"
+        }
+      ]
+    }
+  ],
+  "installCommand": "echo 'Skipping install'",
+  "buildCommand": "echo 'Skipping build'",
+  "outputDirectory": "."
+}

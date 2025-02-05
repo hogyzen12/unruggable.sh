@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.html",
+      "src": "**/*",
       "use": "@vercel/static"
     }
   ],
@@ -16,8 +16,5 @@
         }
       ]
     }
-  ],
-  "installCommand": "echo 'Skipping install'",
-  "buildCommand": "echo 'Skipping build'",
-  "outputDirectory": "."
+  ]
 }
